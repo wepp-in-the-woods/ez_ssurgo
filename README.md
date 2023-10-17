@@ -16,3 +16,11 @@ ssc.makeWeppSoils()
 for mukey, soil in ssc.weppSoils.items():
     soil.write('tests')
 ```
+
+
+## DB Browser for sqlite3
+
+For viewing SSURGO .db sqlite3 cache files
+
+https://sqlitebrowser.org/
+
