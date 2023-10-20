@@ -520,7 +520,7 @@ class Horizon(HorizonMixin):
             res_dict = r2.predict_kwargs(sand=sand, silt=vfs, clay=clay)
 
         if not isfloat(self.ksat_r):
-            self.ksat_r = res_dict['ks']
+            self.ksat_r = res_dict['ks'] * 10.0 / 24.0  # convert from cm/day to mm/hour
             self.horizon_build_notes.append(f'  {chkey}::ksat_r estimated from {rosetta_model}')
 
         # wilting point
